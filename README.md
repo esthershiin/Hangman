@@ -3,4 +3,4 @@ iOS Decal - Project 1
 
 A UCBerkeley inspired Hangman iOS game.
 
-Partner: Allyson Park
+Creators: Esther Shin & Allyson Park
