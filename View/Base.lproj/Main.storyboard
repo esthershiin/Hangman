@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham-Bold.otf">
+            <string>Gotham-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campanile" translatesAutoresizingMaskIntoConstraints="NO" id="mQ8-NW-qR6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INCORRECT GUESSES:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXQ-0t-yxV">
+                                <rect key="frame" x="10" y="534" width="394" height="20"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.056395103119999998" blue="0.57963469450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoK-HE-cCp">
+                                <rect key="frame" x="10" y="468" width="394" height="56"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.056395103119999998" blue="0.57963469450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ6-VK-lpg">
+                                <rect key="frame" x="20" y="59" width="103" height="31"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <state key="normal" title="GET A HINT">
+                                    <color key="titleColor" red="0.0" green="0.056395103116464444" blue="0.57963469454072791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hintButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nyb-fu-4np"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBA-sh-Ow7">
+                                <rect key="frame" x="313" y="59" width="81" height="31"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <state key="normal" title="RESTART">
+                                    <color key="titleColor" red="0.0" green="0.056395103119999998" blue="0.57963469450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iB5-iJ-vri"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akQ-9W-fPm">
+                                <rect key="frame" x="153" y="795" width="108" height="47"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="31"/>
+                                <state key="normal" title="GUESS">
+                                    <color key="titleColor" red="0.0" green="0.056395103119999998" blue="0.57963469450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guessButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHS-UZ-PpO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JS4-Rd-ie9">
+                                <rect key="frame" x="33" y="110" width="348" height="348"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="348" id="WtW-iw-a5Z"/>
+                                    <constraint firstAttribute="width" secondItem="JS4-Rd-ie9" secondAttribute="height" multiplier="1:1" id="rms-9Q-58i"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVp-qu-RjI">
+                                <rect key="frame" x="177" y="741" width="60" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="bvY-pJ-Qd3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98270282712305024" green="0.9288097002831488" blue="0.75974689287667885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="akQ-9W-fPm" firstAttribute="top" secondItem="eVp-qu-RjI" secondAttribute="bottom" constant="20" id="08k-Hy-0zX"/>
+                            <constraint firstAttribute="bottom" secondItem="mQ8-NW-qR6" secondAttribute="bottom" id="7eN-Uy-jq8"/>
+                            <constraint firstItem="JS4-Rd-ie9" firstAttribute="top" secondItem="HJ6-VK-lpg" secondAttribute="bottom" constant="20" id="Amu-Mj-V7J"/>
+                            <constraint firstItem="mXQ-0t-yxV" firstAttribute="top" secondItem="HoK-HE-cCp" secondAttribute="bottom" constant="10" id="HTh-dH-H1b"/>
+                            <constraint firstAttribute="trailing" secondItem="mQ8-NW-qR6" secondAttribute="trailing" id="IC4-Wg-V4R"/>
+                            <constraint firstItem="eVp-qu-RjI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NiV-QC-F7S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fBA-sh-Ow7" secondAttribute="trailing" constant="20" id="P8M-F6-uAk"/>
+                            <constraint firstItem="eVp-qu-RjI" firstAttribute="top" relation="lessThanOrEqual" secondItem="mXQ-0t-yxV" secondAttribute="bottom" constant="187" id="RSu-ig-zQI"/>
+                            <constraint firstItem="akQ-9W-fPm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WIE-Kn-M0j"/>
+                            <constraint firstItem="HJ6-VK-lpg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Wdn-lj-1Zd"/>
+                            <constraint firstItem="mQ8-NW-qR6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b3F-wF-qnr"/>
+                            <constraint firstItem="HJ6-VK-lpg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="e9F-5U-o3q"/>
+                            <constraint firstItem="fBA-sh-Ow7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="gNu-ig-wim"/>
+                            <constraint firstItem="HoK-HE-cCp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iWc-7H-JL5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="akQ-9W-fPm" secondAttribute="bottom" constant="20" id="k11-S6-ZuI"/>
+                            <constraint firstItem="mQ8-NW-qR6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nZu-Tr-yjQ"/>
+                            <constraint firstItem="mXQ-0t-yxV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ny4-FJ-ypv"/>
+                            <constraint firstItem="mXQ-0t-yxV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p9R-oo-gWp"/>
+                            <constraint firstItem="JS4-Rd-ie9" firstAttribute="centerX" secondItem="HoK-HE-cCp" secondAttribute="centerX" id="r5n-bB-lse"/>
+                            <constraint firstItem="HoK-HE-cCp" firstAttribute="top" secondItem="JS4-Rd-ie9" secondAttribute="bottom" constant="10" id="s6T-qX-31x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HoK-HE-cCp" secondAttribute="trailing" constant="10" id="zla-bx-tGg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="correctGuessesLabel" destination="HoK-HE-cCp" id="Jly-m7-Y5h"/>
+                        <outlet property="guessTextField" destination="eVp-qu-RjI" id="kac-g3-Jdn"/>
+                        <outlet property="imageView" destination="JS4-Rd-ie9" id="fCe-eA-hGd"/>
+                        <outlet property="incorrectGuessesLabel" destination="mXQ-0t-yxV" id="o2B-wn-2lv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Campanile" width="1492" height="2380"/>
+    </resources>
+</document>
