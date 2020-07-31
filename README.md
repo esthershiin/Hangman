@@ -1,6 +1,6 @@
 # Hangman
 iOS Decal - Project 1
 
-A UCBerkeley inspired Hangman iOS game.
+A UC Berkeley inspired Hangman iOS game.
 
-Creators: Esther Shin & Allyson Park
+Developers: Esther Shin & Allyson Park
